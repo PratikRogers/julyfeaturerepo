@@ -1,9 +1,11 @@
 {
   "name": "RED",
-  "version": "2.2.0",
+  "version": "2.1.0",
   "private": true,
   "homepage": "",
-  "proxy": "https://10.73.186.42:8080/",
+  "proxybk": "https://10.18.168.98:8098/",
+  "proxy": "https://localhost:8098/",
+  "proxy2": "https://10.73.186.42:8080/",
   "dependencies": {
     "-": "^0.0.1",
     "@popperjs/core": "^2.11.5",
@@ -11,7 +13,6 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.1",
     "@types/file-saver": "^2.0.5",
-    "@types/immutable": "^3.8.7",
     "@types/lodash": "^4.14.182",
     "@types/prop-types": "^15.7.5",
     "@types/react-addons-update": "^0.14.21",
@@ -69,15 +70,14 @@
     "styled-components": "^5.3.5",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
-    "source-map-url": "^0.4.1",
     "webpack": "^5.73.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "builds": "react-scripts-ts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "./node_modules/react-scripts/bin/react-scripts.js start",
+    "start:prod": "pushstate-server build",
+    "build": "./node_modules/react-scripts/bin/react-scripts.js build",
+    "test": "./node_modules/react-scripts/bin/react-scripts.js test --env=jsdom",
+    "eject": "./node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "devDependencies": {
     "@types/jest": "^28.1.3",
